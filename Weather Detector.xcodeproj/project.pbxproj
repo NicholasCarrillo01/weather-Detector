@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BB171682113589200CC2F5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB171672113589200CC2F5F /* WeatherData.swift */; };
+		6BB1716A2113739700CC2F5F /* LocationSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB171692113739700CC2F5F /* LocationSelectViewController.swift */; };
 		6BC3B8CE2111FABD007844FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3B8CD2111FABD007844FD /* AppDelegate.swift */; };
 		6BC3B8D02111FABD007844FD /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3B8CF2111FABD007844FD /* WeatherViewController.swift */; };
 		6BC3B8D32111FABD007844FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC3B8D12111FABD007844FD /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		3B23F2F2724F005D6BCC848C /* Pods_Weather_Detector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_Detector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB171672113589200CC2F5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		6BB171692113739700CC2F5F /* LocationSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectViewController.swift; sourceTree = "<group>"; };
 		6BC3B8CA2111FABD007844FD /* Weather Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC3B8CD2111FABD007844FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC3B8CF2111FABD007844FD /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC3B8E9211226CB007844FD /* Geocodingdata.swift */,
+				6BB171672113589200CC2F5F /* WeatherData.swift */,
 			);
 			path = "data models";
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC3B8CF2111FABD007844FD /* WeatherViewController.swift */,
+				6BB171692113739700CC2F5F /* LocationSelectViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 				6BC3B8CE2111FABD007844FD /* AppDelegate.swift in Sources */,
 				6BC3B8EA211226CB007844FD /* Geocodingdata.swift in Sources */,
 				6BC3B8E821122377007844FD /* APIManager.swift in Sources */,
+				6BB1716A2113739700CC2F5F /* LocationSelectViewController.swift in Sources */,
+				6BB171682113589200CC2F5F /* WeatherData.swift in Sources */,
 				6BC3B8E62112235F007844FD /* APIkeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

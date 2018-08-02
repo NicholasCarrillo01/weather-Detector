@@ -10,6 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Change Location-->
+        <scene sceneID="XbR-YC-JjI">
+            <objects>
+                <viewController title="Change Location" id="jtu-gu-Mx8" customClass="LocationSelectViewController" customModule="Weather_Detector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nAJ-tI-5A3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GYC-Ch-Lhz">
+                                <rect key="frame" x="0.0" y="116" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jtu-gu-Mx8" id="HYU-dU-eah"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GYC-Ch-Lhz" firstAttribute="top" secondItem="awn-Yr-E9i" secondAttribute="top" id="VKW-Jd-DQg"/>
+                            <constraint firstItem="GYC-Ch-Lhz" firstAttribute="leading" secondItem="awn-Yr-E9i" secondAttribute="leading" id="fTK-sP-u81"/>
+                            <constraint firstItem="GYC-Ch-Lhz" firstAttribute="trailing" secondItem="awn-Yr-E9i" secondAttribute="trailing" id="fvS-ag-f8j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="awn-Yr-E9i"/>
+                    </view>
+                    <connections>
+                        <segue destination="sRV-ih-ano" kind="unwind" identifier="unwindToMainScreen" unwindAction="unwindTopMainScreenWithSegue:" id="0PU-Gr-hCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzP-be-50E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sRV-ih-ano" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="793"/>
+        </scene>
         <!--Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -78,7 +111,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="V8D-0f-aMf">
-                        <barButtonItem key="rightBarButtonItem" title="Change Location" id="QyF-xG-J70"/>
+                        <barButtonItem key="rightBarButtonItem" title="Change Location" id="QyF-xG-J70">
+                            <connections>
+                                <segue destination="jtu-gu-Mx8" kind="show" id="3oq-vq-ZSr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentTemperatureLabel" destination="9wG-VD-sPn" id="cpo-j5-LqU"/>

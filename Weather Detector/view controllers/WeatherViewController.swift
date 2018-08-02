@@ -20,20 +20,24 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var lowTemperatureLabel: UILabel!
     
+    var weatherData: WeatherData! {
+        didSet {
+            iconLabel.text = weatherData.condition.icon
+            currentTemperatureLabel.text = "\(weatherData.low)°"
+            highTemperatureLabel.text = "\(weatherData.high)°"
+            lowTemperatureLabel.text = "\(weatherData.low)°"
+        }
+    }
+    var geocodingData: GeocodingData! {
+        didSet {
+            locationLabel.text = geocodingData.formattedAdress
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupUIWithData()
-        
-        let apiManager = APIManager()
-        apiManager.geocode(address: "Louisville", onSuccess: { (geocodingData) in
-            print(geocodingData.formattedAdress)
-            print(geocodingData.latitude)
-            print(geocodingData.longitude)
-            
-        }) { (error) in
-        }
-        
     }
     
     func setupUIWithData() {
@@ -48,6 +52,8 @@ class WeatherViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func unwindTopMainScreen(segue: UIStoryboardSegue) {
+        
+    }
 }
 
